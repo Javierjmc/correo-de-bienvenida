@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienvenida a GTC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primario: #0077b6;
+      --color-secundario: #00b4d8;
+      --color-acento: #90e0ef;
+      --color-fondo: #f1f9fb;
+      --color-texto: #222;
+      --color-gris: #6c757d;
+      --color-blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 920px;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(to right, #caf0f8, #f1fcff);
+      padding: 50px 20px 30px;
+      border-bottom: 3px solid var(--color-acento);
+      border-radius: 0 0 24px 24px;
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    header img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .info-personal {
+      font-size: 1em;
+      margin-top: 10px;
+    }
+
+    .info-personal span:first-of-type {
+      font-weight: 700;
+      color: var(--color-primario);
+    }
+
+    .info-personal span:last-of-type {
+      color: var(--color-gris);
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin: 20px 0 0;
+      color: var(--color-primario);
+      font-weight: 700;
+    }
+
+    main {
+      margin-top: -30px;
+      padding: 30px 0 60px;
+    }
+
+    .card {
+      background-color: var(--color-blanco);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      padding: 30px 25px;
+      margin-bottom: 30px;
+      animation: slideUp 0.8s ease;
+    }
+
+    .card h2 {
+      color: var(--color-primario);
+      margin-bottom: 16px;
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card p {
+      line-height: 1.8;
+      font-size: 1.1em;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(to right, var(--color-primario), var(--color-secundario));
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .archivos ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .archivos li {
+      margin-bottom: 10px;
+      font-size: 1.05em;
+      position: relative;
+      padding-left: 26px;
+    }
+
+    .archivos li::before {
+      content: "📎";
+      position: absolute;
+      left: 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 1em;
+      color: var(--color-gris);
+      margin-top: 30px;
+      padding: 20px;
+    }
+
+    footer span {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .card {
+        padding: 25px 18px;
+      }
+
+      .card h2 {
+        font-size: 1.3em;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <img src="https://recursos-gtc.vercel.app/assets/logo-gtc.png" alt="Logo GTC" />
+      <div class="info-personal">
+        <span>${Asistentes Virtuales.Nombre}</span> <br/>
+        <span>${Asistentes Virtuales.Tipo de Asistente}</span>
+      </div>
+      <h1>Bienvenid@ a Global Talent Connections</h1>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>🙌 ¡Nos alegra tenerte aquí!</h2>
+        <p>Gracias por unirte al equipo de asistentes virtuales de GTC. Estás ingresando a una comunidad enfocada en la innovación, el desarrollo con propósito y el trabajo colaborativo.</p>
+        <p>Tu rol es esencial para mantener la calidad en nuestros procesos y brindar una experiencia excelente a nuestros aliados.</p>
+      </div>
+
+      <div class="card">
+        <h2>🚀 Primeros Pasos</h2>
+        <p>Para comenzar tu experiencia en GTC, te recomendamos visitar nuestra documentación oficial. Allí encontrarás toda la información necesaria para adaptarte rápidamente a nuestras herramientas y procesos internos.</p>
+        <a href="https://www.globaltalentconnections.net/documentacion" class="btn">📘 Acceder a la Documentación</a>
+      </div>
+
+      <div class="card archivos">
+        <h2>📎 Recursos Adjuntos</h2>
+        <p>Te dejamos algunos documentos clave que te ayudarán a integrarte y desempeñar tu rol de forma exitosa:</p>
+        <ul>
+          <li>Plan de Asistente</li>
+          <li>Programa de Integración Corporativa</li>
+          <li>Manual del Sistema de Monitoreo</li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <span>Gracias por ser parte de esta comunidad. Este es solo el comienzo de un gran camino juntos.</span>
+      <span><strong>Dirección de Talento – GTC</strong></span>
+    </footer>
+  </div>
+
+</body>
+</html>
